@@ -15,10 +15,12 @@ Este projeto demonstra a implementação de um sistema simples de dados de usuá
 
 - **Database**
   - Atributos:
-    - `- instance : Database`
+    - `- url : String`
+    - `- password : String`
+    - `- user : String`
     - `- connection : Connection`
   - Métodos:
-    - `+ getInstance() : Database`
+    - `+ Conectar()`
     - `+ getConnection() : Connection`
 
 - **User**
