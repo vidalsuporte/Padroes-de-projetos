@@ -9,49 +9,53 @@ Este projeto demonstra a implementação de um sistema simples de dados de usuá
 - **UserAdapter.java**: Implementa o padrão Adapter para adaptar o objeto `User` e fornecer métodos de acesso.
 - **Client.java**: Classe principal que executa o exemplo.
 
+# Diagrama de Classes
+
+## Classes
+
+- **Database**
+  - Atributos:
+    - `- instance : Database`
+    - `- connection : Connection`
+  - Métodos:
+    - `+ getInstance() : Database`
+    - `+ getConnection() : Connection`
+
+- **User**
+  - Atributos:
+    - `- id : int`
+    - `- name : String`
+    - `- email : String`
+  - Métodos:
+    - `+ getId() : int`
+    - `+ getName() : String`
+    - `+ getEmail() : String`
+
+- **UserAdapter**
+  - Atributos:
+    - `- user : User`
+  - Métodos:
+    - `+ UserAdapter(User user)`
+    - `+ getUserId() : int`
+    - `+ getUserName() : String`
+    - `+ getUserEmail() : String`
+
+- **Client**
+  - Métodos:
+    - `+ main(args : String[]) : void`
+
+## Relacionamentos
+
+- **Database** utiliza **UserAdapter**
+- **UserAdapter** adapta **User**
+- **Client** acessa **Database**
+
+
+
 ## Requisitos
 
 - Java 8 ou superior
 - Biblioteca JDBC
-
-## Diagrama e Classe
-
-classDiagram
-    class Database {
-        -instance : Database
-        -connection : Connection
-        +getInstance() : Database
-        +getConnection() : Connection
-    }
-
-    class User {
-        -id : int
-        -name : String
-        -email : String
-        +getId() : int
-        +getName() : String
-        +getEmail() : String
-    }
-
-    class UserAdapter {
-        -user : User
-        +UserAdapter(User user)
-        +getUserId() : int
-        +getUserName() : String
-        +getUserEmail() : String
-    }
-
-    class Client {
-        +main(args : String[]) : void
-    }
-
-    Database o-- UserAdapter : uses
-    UserAdapter o-- User : adapts
-    Client o-- Database : accesses
-
-
-
-
 
 
 
