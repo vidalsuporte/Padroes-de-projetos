@@ -1,6 +1,6 @@
 # Cadastro de Usuários com Singleton e Adapter
 
-Este projeto demonstra a implementação de um sistema simples de dados de usuários em Java, utilizando os padrões de projeto Singleton e Adapter.
+Este projeto demonstra a implementação de um sistema simples de dados para usuários e conexão de banco de dados com JDBC em Java, utilizando os padrões de projeto Singleton e Adapter.
 
 ## Estrutura do Projeto
 
